@@ -1,28 +1,29 @@
 {
-    "manifest_version": 3,
-    "name": "CopyBuddy",
-    "version": "1.9",
-    "description": "Tu amiguito que copia URLs de pestañas.",
-    "permissions": ["tabs", "scripting", "notifications"],
-    "host_permissions": ["<all_urls>"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_title": "Copiar URLs de Pestañas",
-      "default_icon": "icons/icon.png"
-    },
-    "icons": {
-      "16": "icons/icon.png",
-      "48": "icons/icon.png",
-      "128": "icons/icon.png"
-    },
-    "content_scripts": [
-      {
-        "matches": ["http://*/*", "https://*/*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "CopyBuddy",
+  "version": "1.9",
+  "description": "Copy URLs from tabs.",
+  "permissions": ["tabs", "scripting", "notifications"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Copy Tab URLs",
+    "default_icon": "icons/icon.png"
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
   
